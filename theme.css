@@ -81,3 +81,87 @@ body,
   margin-left: calc(var(--indent-step) * 3);
 }
 /* Extend for deeper headers if needed */
+
+/* ─────────────────────────────────────────────── */
+/* Normalize Header Sizes and Font                 */
+/* ─────────────────────────────────────────────── */
+
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6 {
+  font-family: var(--font-family);
+  font-size: 1rem; /* You can adjust this to taste */
+  font-weight: normal;
+  line-height: var(--line-height);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+/* ───────────────────────────────────────────── */
+/* Normalize Header Styles in Editing Mode       */
+/* ───────────────────────────────────────────── */
+
+.markdown-source-view.mod-cm6 h1,
+.markdown-source-view.mod-cm6 h2,
+.markdown-source-view.mod-cm6 h3,
+.markdown-source-view.mod-cm6 h4,
+.markdown-source-view.mod-cm6 h5,
+.markdown-source-view.mod-cm6 h6 {
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: var(--line-height);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.cm-header {
+  color: var(--text-muted); /* Or use a lighter tone */
+  font-size: 1rem;
+  font-weight: normal;
+}
+/* ───────────────────────────────────────────── */
+/* Flatten Header Styling in Live Preview        */
+/* ───────────────────────────────────────────── */
+
+.markdown-source-view.mod-cm6 .cm-header,
+.markdown-source-view.mod-cm6 .cm-header-1,
+.markdown-source-view.mod-cm6 .cm-header-2,
+.markdown-source-view.mod-cm6 .cm-header-3,
+.markdown-source-view.mod-cm6 .cm-header-4,
+.markdown-source-view.mod-cm6 .cm-header-5,
+.markdown-source-view.mod-cm6 .cm-header-6 {
+  font-family: var(--font-family);
+  font-size: 1rem !important;
+  font-weight: normal !important;
+  background: none !important;
+  color: var(--text-normal) !important;
+}
+.markdown-source-view.mod-cm6 .cm-header .cm-hash {
+  color: var(--text-muted) !important;
+}
+/* ───────────────────────────────────────────── */
+/* Normalize Code Block Font and Size            */
+/* ───────────────────────────────────────────── */
+
+/* Reading Mode */
+.markdown-preview-view pre,
+.markdown-preview-view code {
+  font-family: var(--font-family) !important;
+  font-size: 1rem !important;
+  line-height: var(--line-height);
+}
+
+/* Editing Mode (Live Preview) */
+.markdown-source-view.mod-cm6 .cm-inline-code,
+.markdown-source-view.mod-cm6 .cm-codeblock {
+  font-family: var(--font-family) !important;
+  font-size: 1rem !important;
+  line-height: var(--line-height);
+}
+.markdown-preview-view pre {
+  background-color: var(--background-secondary);
+  padding: 0.5rem;
+  border-radius: 4px;
+}
