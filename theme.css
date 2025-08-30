@@ -231,3 +231,56 @@ body,
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
+/* ───────────────────────────────────────────── */
+/* Flatten Vertical Rhythm Across All Elements   */
+/* ───────────────────────────────────────────── */
+
+/* Reading Mode */
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6,
+.markdown-preview-view p,
+.markdown-preview-view ul,
+.markdown-preview-view ol,
+.markdown-preview-view li,
+.markdown-preview-view pre,
+.markdown-preview-view code,
+.markdown-preview-view blockquote,
+.markdown-preview-view .callout {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+  padding: 0 !important;
+  line-height: var(--line-height);
+}
+
+/* Editing Mode: Flatten line spacing */
+.markdown-source-view.mod-cm6 .cm-line {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  line-height: var(--line-height) !important;
+}
+
+/* Editing Mode: Normalize block spacing */
+.markdown-source-view.mod-cm6 .cm-header,
+.markdown-source-view.mod-cm6 .cm-header-1,
+.markdown-source-view.mod-cm6 .cm-header-2,
+.markdown-source-view.mod-cm6 .cm-header-3,
+.markdown-source-view.mod-cm6 .cm-header-4,
+.markdown-source-view.mod-cm6 .cm-header-5,
+.markdown-source-view.mod-cm6 .cm-header-6,
+.markdown-source-view.mod-cm6 .cm-list,
+.markdown-source-view.mod-cm6 .cm-list-1,
+.markdown-source-view.mod-cm6 .cm-list-2,
+.markdown-source-view.mod-cm6 .cm-codeblock,
+.markdown-source-view.mod-cm6 .cm-blockquote {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+  padding: 0 !important;
+  line-height: var(--line-height) !important;
+}
+:root {
+  --block-spacing: 0.5rem;
+}
