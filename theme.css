@@ -32,3 +32,52 @@ svg * {
 .menu-separator {
 	margin: var(--size-2-1) calc(var(--size-2-1) * -1);
 }
+
+/* ─────────────────────────────────────────────── */
+/* Barry's Code-Editor Styling Layer               */
+/* ─────────────────────────────────────────────── */
+
+:root {
+  --font-family: 'Fira Code', monospace;
+  --line-height: 1.6;
+  --indent-step: 1rem;
+  --line-number-color: #888;
+  --line-number-width: 2.5rem;
+  --body-padding: 1rem;
+}
+
+/* Apply monospace font globally */
+body,
+.markdown-preview-view,
+.cm-s-obsidian {
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  padding: var(--body-padding);
+}
+
+/* Simulated line numbers in preview */
+.markdown-preview-view pre {
+  position: relative;
+  padding-left: var(--line-number-width);
+}
+.markdown-preview-view pre::before {
+  content: attr(data-line);
+  position: absolute;
+  left: 0;
+  color: var(--line-number-color);
+  text-align: right;
+  width: var(--line-number-width);
+  padding-right: 0.5rem;
+}
+
+/* Header-based indentation */
+.markdown-preview-view h1 + p {
+  margin-left: calc(var(--indent-step) * 1);
+}
+.markdown-preview-view h2 + p {
+  margin-left: calc(var(--indent-step) * 2);
+}
+.markdown-preview-view h3 + p {
+  margin-left: calc(var(--indent-step) * 3);
+}
+/* Extend for deeper headers if needed */
