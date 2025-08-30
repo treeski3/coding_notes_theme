@@ -165,3 +165,19 @@ body,
   padding: 0.5rem;
   border-radius: 4px;
 }
+/* ───────────────────────────────────────────── */
+/* Force Uniform Font in Editing Mode Code Blocks */
+/* ───────────────────────────────────────────── */
+
+.markdown-source-view.mod-cm6 .cm-codeblock,
+.markdown-source-view.mod-cm6 .cm-line span {
+  font-family: var(--font-family) !important;
+  font-size: 1rem !important;
+  line-height: var(--line-height);
+}
+.cm-s-obsidian .cm-line span.cm-keyword,
+.cm-s-obsidian .cm-line span.cm-variable,
+.cm-s-obsidian .cm-line span.cm-string {
+  font-family: var(--font-family) !important;
+  font-size: 1rem !important;
+}
