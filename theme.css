@@ -181,3 +181,53 @@ body,
   font-family: var(--font-family) !important;
   font-size: 1rem !important;
 }
+/* ───────────────────────────────────────────── */
+/* Unified Line Spacing for Reading + Editing    */
+/* ───────────────────────────────────────────── */
+
+/* Reading Mode */
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6,
+.markdown-preview-view p,
+.markdown-preview-view ul,
+.markdown-preview-view ol,
+.markdown-preview-view li,
+.markdown-preview-view pre,
+.markdown-preview-view code,
+.markdown-preview-view blockquote {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Editing Mode */
+.markdown-source-view.mod-cm6 .cm-line {
+  line-height: 1.6 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Normalize spacing around headers in editing */
+.markdown-source-view.mod-cm6 .cm-header,
+.markdown-source-view.mod-cm6 .cm-header-1,
+.markdown-source-view.mod-cm6 .cm-header-2,
+.markdown-source-view.mod-cm6 .cm-header-3,
+.markdown-source-view.mod-cm6 .cm-header-4,
+.markdown-source-view.mod-cm6 .cm-header-5,
+.markdown-source-view.mod-cm6 .cm-header-6 {
+  line-height: 1.6 !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Normalize spacing in code blocks (editing) */
+.markdown-source-view.mod-cm6 .cm-codeblock,
+.markdown-source-view.mod-cm6 .cm-line span {
+  line-height: 1.6 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
